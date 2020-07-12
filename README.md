@@ -1,6 +1,6 @@
 ### Introduction
 
-A convolutional neural network (CNN) is a specific type of artificial neural network for supervised learning in order to analyse the data. CNNs are applied to image processing, natural language processing and other kind of tasks.
+A **convolutional neural network (CNN) is a specific type of artificial neural network for supervised learning in order to analyse the data. CNNs are applied to image processing, natural language processing and other kind of tasks.**
 
 Here, an atomic element is taken from the input image and it is shifted to every location in the image. This process is called Convolution. The convolution is demonstrated by shifting the filter to every location in the image. These filters are learned entirely based on the data.
 
