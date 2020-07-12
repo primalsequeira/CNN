@@ -1,5 +1,3 @@
-# MNIST digit classification using CNN
-
 ### Introduction
 
 A convolutional neural network (CNN) is a specific type of artificial neural network for supervised learning in order to analyse the data. CNNs are applied to image processing, natural language processing and other kind of tasks.
@@ -8,7 +6,7 @@ Here, an atomic element is taken from the input image and it is shifted to every
 
 ![cnn](https://user-images.githubusercontent.com/67816058/87246609-18cfb900-c46c-11ea-90fb-cb9be83f3a1c.png)
 
-## MNIST digit classification
+# MNIST digit classification
 
 
 
@@ -93,7 +91,7 @@ print(training_images[0])
 ```
 We notice here that the values are between 0 to 255. But it becomes easier to train the model, if the values are between 0 and 1.
 
-## Preprocess the Data
+# Preprocess the Data
 
 Previously we have seen that the dimension of training data is (60000, 28, 28). But the model which we are using i.e CNN (Convolution Neural Network) requires one more dimension which states if the image is greyscale or not. If the image is in rgb we must reshape it to the greyscale format.
 
@@ -130,7 +128,7 @@ training_images  = training_images / 255.0
 test_images = test_images / 255.0
 ```
 
-## Create the model
+# Create the model
 We will be using the most straightforward API which is Keras. Therefore, we import the Sequential Model from Keras and add Conv2D, MaxPooling, Flatten, Dropout, and Dense layers.
 ```markdown
 batch_size = 128
@@ -193,7 +191,7 @@ The last dense layer has 10 neurons because we have 10 classes of numbers in the
 
 For eg: If the output of last layer is  [0.1, 0.1, 0.05, 0.1, 9.5, 0.1, 0.05, 0.05, 0.05], then it returns  [0, 0, 0, 0, 1, 0, 0, 0, 0].
 
-## Compile and train the model
+# Compile and train the model
 
 Next step is to compile the model with an optimizer and loss function.
 The epochs equals 5 value means that it will go through the training loop 5 times. Make a guess, measure how good or how bad the guesses with the loss function, 
@@ -206,7 +204,7 @@ history = model.fit(training_images, training_labels,batch_size=batch_size,
 ```
 Now as we are done with training, we can see the accuracy at the end of the final epoch which is 0.9831. This means that the neural network is about 98% accurate in classifying the training data.
 
-## Evaluate the Model 
+# Evaluate the Model 
 Evaluation is done on the test data. It returned 98% accuracy.
 
 ```markdown
@@ -214,7 +212,7 @@ score = model.evaluate(test_images, test_labels, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 ```
-## Prediction
+# Prediction
 ```markdown
 classifications = model.predict(test_images)
 print(classifications[0])
