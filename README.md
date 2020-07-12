@@ -122,7 +122,7 @@ test_images = test_images.astype('float32')
 ```
 Here it returns binary matrix representation of the input.
 
-`Normalization` is done next by dividing training_images by 255.
+**`Normalization`** is done next by dividing training_images by 255.
 ```markdown
 training_images  = training_images / 255.0
 test_images = test_images / 255.0
@@ -185,7 +185,7 @@ The next convolution and Maxpooling layers will operate similar as before.
 **`Flatten`** takes the square (28, 28) images and turns into one dimensional array.
 So when we flatten the final output shape (5, 5, 64) we get 1600 elements.
 
-**`The Dense layer`** here has 128 neurons and each layer of neurons needs an activation function which tells what to do. `Relu` is an activation function which removes off the negative values. **`"If X>0 return X, else return 0"`**
+**`The Dense layer`** here has 128 neurons and each layer of neurons needs an activation function which tells what to do. **`Relu`** is an activation function which removes off the negative values. **`"If X>0 return X, else return 0"`**
 
 The last dense layer has 10 neurons because we have 10 classes of numbers in the dataset and also activation function used is **`softmax`** which takes the set of values and selects the largest one.
 
