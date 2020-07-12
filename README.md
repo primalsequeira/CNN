@@ -1,6 +1,6 @@
 ### Introduction
 
-A **convolutional neural network (CNN) is a specific type of artificial neural network for supervised learning in order to analyse the data. CNNs are applied to image processing, natural language processing and other kind of tasks.**
+A convolutional neural network (CNN) is a specific type of artificial neural network for supervised learning in order to analyse the data. CNNs are applied to image processing, natural language processing and other kind of tasks.
 
 Here, an atomic element is taken from the input image and it is shifted to every location in the image. This process is called Convolution. The convolution is demonstrated by shifting the filter to every location in the image. These filters are learned entirely based on the data.
 
@@ -10,7 +10,7 @@ Here, an atomic element is taken from the input image and it is shifted to every
 
 
 
-In this example, we are classifying the digits using CNN. The dataset we will be using is MNIST. It consists of **`60,000`** small square 28x28 pixel greyscale images of handwritten single digits from 0 to 9 for training and **10,000** testing images.
+In this example, we are classifying the digits using CNN. The dataset we will be using is MNIST. It consists of **`60,000`** small square 28x28 pixel greyscale images of handwritten single digits from 0 to 9 for training and **`10,000`** testing images.
 
 
 ![mnistdataset](https://user-images.githubusercontent.com/67816058/87246630-3e5cc280-c46c-11ea-8748-cd6c27fcb371.png)
@@ -67,7 +67,7 @@ import matplotlib.pyplot as plt
 ```
 ## Splitting the data into training and testing data
 
-Here we call load_data function on the mnist object and then split the entire dataset into two lists i.e. the `training values` and the `testing values`.
+Here we call load_data function on the mnist object and then split the entire dataset into two lists i.e. the **`training values`** and the **`testing values`**.
 We do this splitting because we want to train our model with a large data(training_images) and test it with the data which the model had'nt seen previously(test_images).
 
 ```markdown
@@ -147,16 +147,16 @@ model.add(Dropout(0.5))
 model.add(Dense(10, activation='softmax'))
 model.compile(loss=keras.losses.categorical_crossentropy,optimizer=keras.optimizers.Adadelta(),metrics=['accuracy'])
 ```
-`Sequential()` define the SEQUENCE of layers in the neural network.
-In the first convolution layer we are generating 64 filters. These filtes are 3x3, Their activation is `relu` where the negative values will be thrown away and the input_shape is as before (28, 28, 1). 1 indicates that we are using single byte for color depth as our images are greyscaled.
+**`Sequential()`** define the SEQUENCE of layers in the neural network.
+In the first convolution layer we are generating 64 filters. These filtes are 3x3, Their activation is **`relu`** where the negative values will be thrown away and the input_shape is as before (28, 28, 1). 1 indicates that we are using single byte for color depth as our images are greyscaled.
 
 
-It will then create a Pooling layer. Its `MaxPooling` because we are taking the maximum value. Its a 2x2 pool which means for every 4 pixels the biggest one will be considered.
+It will then create a Pooling layer. Its **`MaxPooling`** because we are taking the maximum value. Its a 2x2 pool which means for every 4 pixels the biggest one will be considered.
 
 
-`Dropout()` is a regularization technique that is used to prevent the neural networks from overfitting. It randomly drops neurons along with their connections from the neural network during training in each iteration thereby preventing overfitting. 
+**`Dropout()`** is a regularization technique that is used to prevent the neural networks from overfitting. It randomly drops neurons along with their connections from the neural network during training in each iteration thereby preventing overfitting. 
 
-`model.summary()` will allow us to inspect the layers of the model and see the journey of the image through the convolutions.
+**`model.summary()`** will allow us to inspect the layers of the model and see the journey of the image through the convolutions.
 
 ```markdown
 model.summary()
@@ -182,12 +182,12 @@ Next is the first Maxpooling layer with pool_size of (2, 2) thus it turns every 
 The next convolution and Maxpooling layers will operate similar as before.
 
 
-`Flatten` takes the square (28, 28) images and turns into one dimensional array.
+**`Flatten`** takes the square (28, 28) images and turns into one dimensional array.
 So when we flatten the final output shape (5, 5, 64) we get 1600 elements.
 
-`The Dense layer` here has 128 neurons and each layer of neurons needs an activation function which tells what to do. `Relu` is an activation function which removes off the negative values. `"If X>0 return X, else return 0"`
+**`The Dense layer`** here has 128 neurons and each layer of neurons needs an activation function which tells what to do. `Relu` is an activation function which removes off the negative values. **`"If X>0 return X, else return 0"`**
 
-The last dense layer has 10 neurons because we have 10 classes of numbers in the dataset and also activation function used is `softmax` which takes the set of values and selects the largest one.
+The last dense layer has 10 neurons because we have 10 classes of numbers in the dataset and also activation function used is **`softmax`** which takes the set of values and selects the largest one.
 
 For eg: If the output of last layer is  [0.1, 0.1, 0.05, 0.1, 9.5, 0.1, 0.05, 0.05, 0.05], then it returns  [0, 0, 0, 0, 1, 0, 0, 0, 0].
 
@@ -197,7 +197,7 @@ Next step is to compile the model with an optimizer and loss function.
 The epochs equals 5 value means that it will go through the training loop 5 times. Make a guess, measure how good or how bad the guesses with the loss function, 
 then use the optimizer and the data to make another guess and repeat this.
 
-We then train the model using `model.fit()` which then fits your training data to your training labels.
+We then train the model using **`model.fit()`** which then fits your training data to your training labels.
 ```markdown
 history = model.fit(training_images, training_labels,batch_size=batch_size,
                  epochs = 5, verbose = 1, validation_data = (test_images, test_labels))
