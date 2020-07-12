@@ -10,7 +10,7 @@ Here, an atomic element is taken from the input image and it is shifted to every
 
 
 
-In this example, we are classifying the digits using CNN. The dataset we will be using is MNIST. It consists of `60,000` small square 28x28 pixel greyscale images of handwritten single digits from 0 to 9 for training and `10,000` testing images.
+In this example, we are classifying the digits using CNN. The dataset we will be using is MNIST. It consists of **`60,000`** small square 28x28 pixel greyscale images of handwritten single digits from 0 to 9 for training and **10,000** testing images.
 
 
 ![mnistdataset](https://user-images.githubusercontent.com/67816058/87246630-3e5cc280-c46c-11ea-8748-cd6c27fcb371.png)
@@ -106,7 +106,7 @@ print(training_images.shape)
 print(test_images.shape)
 ```
 
-Next, we apply `to_categorical() function` since we have multiclass results (10 output).
+Next, we apply **`to_categorical() function`** since we have multiclass results (10 output).
 It converts a class vector (integers) to binary class matrix.
 
 ```markdown
