@@ -41,6 +41,9 @@ for i in range(cols):
       
 ```
 
+![Screenshot (265)](https://user-images.githubusercontent.com/67816058/87319115-d5964880-c546-11ea-883c-6ff1bf662821.png)
+
+
 We can also see the number of images of each digit using the code below.
 ```markdown
 
@@ -52,6 +55,8 @@ plt.xlabel("Class Number")
 plt.ylabel("Number of images")
  ```
 It’s a bar graph having "Class number" as X-axis and "Number of images" as Y-axis.
+
+![Screenshot (264)](https://user-images.githubusercontent.com/67816058/87319095-d0d19480-c546-11ea-8cb9-6423fffe7eb9.png)
 
 ## Import all the required libraries
 ```markdown
@@ -161,6 +166,9 @@ It will then create a Pooling layer. Its **`MaxPooling`** because we are taking 
 ```markdown
 model.summary()
 ```
+![Screenshot (260)](https://user-images.githubusercontent.com/67816058/87318843-805a3700-c546-11ea-9aa3-1c41d321ee88.png)
+
+
 Look into the output Shape. It might look like a bug because the input shape is 28 x 28.The key to this is that the filter is 3x3 filter.
 When we start scanning the image from the top-left, we cant calculate the filter for the top-left because it doesnt have neighbours above it or to its left.
 
@@ -204,6 +212,8 @@ history = model.fit(training_images, training_labels,batch_size=batch_size,
 ```
 Now as we are done with training, we can see the accuracy at the end of the final epoch which is 0.9831. This means that the neural network is about 98% accurate in classifying the training data.
 
+![Screenshot (261)](https://user-images.githubusercontent.com/67816058/87318913-9b2cab80-c546-11ea-8c98-c9c13dff1ce7.png)
+
 # Evaluate the Model 
 Evaluation is done on the test data. It returned 98% accuracy.
 
@@ -225,6 +235,7 @@ It creates a set of classifications for each of the test images, and then prints
 
 These numbers are probability that the item is each of the 10 classes. First value in the list is the probability that the image is a ‘0’, the next is a ‘1’ and so on.
 
+![Screenshot (262)](https://user-images.githubusercontent.com/67816058/87318952-a5e74080-c546-11ea-8714-e3c7b127bb7a.png)
 
 The probability that the first image is a ‘7’ is the highest among all. So the neural network is telling that the first testing image is a ‘7’.
 
