@@ -83,8 +83,16 @@ We do this splitting because we want to train our model with a large data(traini
 #### Let's check the size of training images and testing images.
 ```markdown
 print(training_images.shape)
+```
+`(60000, 28, 28)`
+
+```markdown
 print(test_images.shape)
 ```
+
+`(10000, 28, 28)`
+
+
 The first parameter gives the number of images we have. The 2nd and 3rd parameter are the pixel values of the images from x to y (28x28). This is because when we train our model, the image needs to be in 28x28 format.
 
 #### Now Let's just print the first training image and its label.
