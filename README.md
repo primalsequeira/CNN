@@ -119,6 +119,12 @@ print(training_images.shape)
 print(test_images.shape)
 ```
 
+`(60000, 28, 28, 1)`
+
+
+`(10000, 28, 28, 1)`
+
+
 Next, we apply **`to_categorical() function`** since we have multiclass results (10 output).
 It converts a class vector (integers) to binary class matrix.
 
