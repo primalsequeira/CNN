@@ -258,8 +258,8 @@ It creates a set of classifications for each of the test images, and then prints
 These numbers are probability that the item is each of the 10 classes. First value in the list is the probability that the image is a ‘0’, the next is a ‘1’ and so on.
 
 
-[8.6000157e-10    4.1455039e-09    4.8470059e-07    5.9448496e-08    7.1533096e-10    
-7.6351168e-11    1.6419444e-12    **9.9999940e-01**   2.3502045e-09    8.3064648e-08]
+**[8.6000157e-10    4.1455039e-09    4.8470059e-07    5.9448496e-08    7.1533096e-10    
+7.6351168e-11    1.6419444e-12    **`9.9999940e-01`**   **2.3502045e-09    8.3064648e-08]**
 
 
 The probability that the first image is a ‘7’ is the highest among all. So the neural network is telling that the first testing image is a ‘7’.
