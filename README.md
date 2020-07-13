@@ -210,7 +210,7 @@ We then train the model using **`model.fit()`** which then fits your training da
 history = model.fit(training_images, training_labels,batch_size=batch_size,
                  epochs = 5, verbose = 1, validation_data = (test_images, test_labels))
 ```
-Now as we are done with training, we can see the accuracy at the end of the final epoch which is 0.9831. This means that the neural network is about 98% accurate in classifying the training data.
+Now as we are done with training, we can see the accuracy at the end of the final epoch which is 0.9827. This means that the neural network is about 98% accurate in classifying the training data.
 
 ![Screenshot (261)](https://user-images.githubusercontent.com/67816058/87318913-9b2cab80-c546-11ea-8c98-c9c13dff1ce7.png)
 
@@ -222,6 +222,14 @@ score = model.evaluate(test_images, test_labels, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 ```
+Output:
+
+Test loss: **`0.029026737729845625`**
+
+
+Test accuracy: **`0.9898999929428101`**
+
+
 # Prediction
 ```markdown
 classifications = model.predict(test_images)
@@ -235,7 +243,9 @@ It creates a set of classifications for each of the test images, and then prints
 
 These numbers are probability that the item is each of the 10 classes. First value in the list is the probability that the image is a ‘0’, the next is a ‘1’ and so on.
 
-![Screenshot (262)](https://user-images.githubusercontent.com/67816058/87318952-a5e74080-c546-11ea-8714-e3c7b127bb7a.png)
+
+[8.6000157e-10   4.1455039e-09   4.8470059e-07   5.9448496e-08   7.1533096e-10   7.6351168e-11   1.6419444e-12   **9.9999940e-01**  2.3502045e-09   8.3064648e-08]
+
 
 The probability that the first image is a ‘7’ is the highest among all. So the neural network is telling that the first testing image is a ‘7’.
 
