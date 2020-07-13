@@ -16,6 +16,9 @@ In this example, we are classifying the digits using CNN. The dataset we will be
 ![mnistdataset](https://user-images.githubusercontent.com/67816058/87246630-3e5cc280-c46c-11ea-8748-cd6c27fcb371.png)
 
 
+# Visualizing the Data
+
+
 MNIST dataset has a lot of handwritten images. So lets just look into any 5 random images of each of the digit.
 Here's the code:
 ```markdown
