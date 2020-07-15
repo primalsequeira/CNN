@@ -144,7 +144,7 @@ test_images = test_images.astype('float32')
 ```
 Here it returns binary matrix representation of the input.
 
-**`Normalization`** is done next by dividing training_images by 255.
+**`Normalization`** is done next to get the image pixel values between 0 and 1 ( Divide by 255).
 ```markdown
 training_images  = training_images / 255.0
 test_images = test_images / 255.0
