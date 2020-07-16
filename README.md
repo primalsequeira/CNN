@@ -61,9 +61,7 @@ It’s a bar graph having "Class number" as X-axis and "Number of images" as Y-a
 
 ![Screenshot (264)](https://user-images.githubusercontent.com/67816058/87319095-d0d19480-c546-11ea-8cb9-6423fffe7eb9.png)
 
-
 # Import all the required libraries
-
 
 ```markdown
 import tensorflow as tf
@@ -76,10 +74,7 @@ from keras import backend as K
 import matplotlib.pyplot as plt
 
 ```
-
-
 # Splitting the data into training and testing data
-
 
 Here we call load_data function on the mnist object and then split the entire dataset into two lists i.e. the **`training values`** and the **`testing values`**.
 We do this splitting because we want to train our model with a large data(training_images) and test it with the data which the model had'nt seen previously(test_images).
